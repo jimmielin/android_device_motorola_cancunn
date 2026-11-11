@@ -1,0 +1,10 @@
+[
+  {
+    "repository": "android_device_motorola_mt6855-common",
+    "target_path": "device/motorola/mt6855-common"
+  },
+  {
+    "repository": "android_device_motorola_cancunn-kernels",
+    "target_path": "device/motorola/cancunn-kernels"
+  }
+]

@@ -1,0 +1,6 @@
+# Radio
+ro.vendor.radio.imei.sv=25
+
+# Vibrator: the ERM motor turns each texture tick into a full pulse, which
+# makes slider drags buzz; keep texture ticks short enough to stay subtle.
+ro.vendor.vibrator.hal.texture_tick.duration=4
