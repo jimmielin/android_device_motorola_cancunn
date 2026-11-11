@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- NFC antenna location reported to apps: device size in millimeters
+         and the antenna center in millimeters from the top-left corner of
+         the device, as seen from the front in portrait. -->
+    <integer name="device_width">72</integer>
+    <integer name="device_height">160</integer>
+    <bool name="device_foldable">false</bool>
+    <integer-array name="antenna_x">
+        <item>25</item>
+    </integer-array>
+    <integer-array name="antenna_y">
+        <item>130</item>
+    </integer-array>
+</resources>

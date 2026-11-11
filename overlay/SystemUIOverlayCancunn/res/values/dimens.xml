@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- Extra inset that keeps status bar content clear of the rounded corners. -->
+    <dimen name="rounded_corner_content_padding">30px</dimen>
+
+    <!-- Distance between the lock screen indication text and the bottom of the screen. -->
+    <dimen name="keyguard_indication_margin_bottom">16dp</dimen>
+
+    <!-- Vertical center of the power key (which holds the fingerprint sensor),
+         in display pixels from the top; origin of the power-button wake and
+         unlock animations. -->
+    <dimen name="physical_power_button_center_screen_location_y">1010px</dimen>
+</resources>

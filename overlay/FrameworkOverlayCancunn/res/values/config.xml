@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- The FPC sensor in the power key, exposed by the HIDL fingerprint HAL
+         as sensor 0 (id:modality:strength = 0:fingerprint:strong). -->
+    <string-array name="config_biometric_sensors" translatable="false">
+        <item>0:2:15</item>
+    </string-array>
+
+    <!-- The fingerprint sensor is built into the power button. -->
+    <bool name="config_is_powerbutton_fps">true</bool>
+
+    <!-- Side fingerprint sensor location: display, x, y, radius (stock values). -->
+    <array name="config_sfps_sensor_props" translatable="false">
+        <item>@array/config_sfps_sensor_props_0</item>
+    </array>
+    <array name="config_sfps_sensor_props_0" translatable="false">
+        <item></item>
+        <item>0</item>
+        <item>1010</item>
+        <item>0</item>
+    </array>
+
+    <!-- Brightness: the LCD peaks at about 500 nits. config_screenBrightnessBacklight
+         (framework 0-255 scale) and config_screenBrightnessNits describe the panel
+         response; the float values below are fractions of the full backlight range. -->
+
+    <!-- Lowest brightness the user can select (under 1% of the backlight range). -->
+    <item name="config_screenBrightnessSettingMinimumFloat" format="float" type="dimen">0.0078</item>
+
+    <!-- Brightness used on first boot. -->
+    <item name="config_screenBrightnessSettingDefaultFloat" format="float" type="dimen">0.4</item>
+
+    <!-- Brightness used to dim the screen before the user activity timeout expires. -->
+    <item name="config_screenBrightnessDimFloat" format="float" type="dimen">0.0078</item>
+
+    <!-- Brightness used while dozing: backlight level 17 on the 0-255 scale,
+         i.e. (17 - 1) / 254. -->
+    <item name="config_screenBrightnessDozeFloat" format="float" type="dimen">0.06299213</item>
+
+    <!-- Ambient light (lux) thresholds for the auto-brightness curve. Each entry
+         starts a new control point in config_autoBrightnessDisplayValuesNits. -->
+    <integer-array name="config_autoBrightnessLevels">
+        <item>1</item>
+        <item>2</item>
+        <item>5</item>
+        <item>10</item>
+        <item>29</item>
+        <item>50</item>
+        <item>90</item>
+        <item>100</item>
+        <item>150</item>
+        <item>200</item>
+        <item>300</item>
+        <item>400</item>
+        <item>500</item>
+        <item>800</item>
+        <item>1000</item>
+        <item>1300</item>
+        <item>1500</item>
+        <item>1600</item>
+        <item>1800</item>
+        <item>2000</item>
+        <item>3000</item>
+        <item>4000</item>
+        <item>8000</item>
+    </integer-array>
+
+    <!-- Target screen brightness in nits for each auto-brightness control point;
+         one entry longer than config_autoBrightnessLevels. -->
+    <array name="config_autoBrightnessDisplayValuesNits">
+        <item>3</item>
+        <item>10</item>
+        <item>20</item>
+        <item>50</item>
+        <item>70</item>
+        <item>85</item>
+        <item>110</item>
+        <item>130</item>
+        <item>150</item>
+        <item>180</item>
+        <item>180</item>
+        <item>180</item>
+        <item>180</item>
+        <item>225</item>
+        <item>270</item>
+        <item>275</item>
+        <item>275</item>
+        <item>275</item>
+        <item>350</item>
+        <item>380</item>
+        <item>420</item>
+        <item>500</item>
+        <item>500</item>
+        <item>500</item>
+    </array>
+
+    <!-- Backlight levels (0-255) matching each entry of config_screenBrightnessNits. -->
+    <integer-array name="config_screenBrightnessBacklight">
+        <item>0</item>
+        <item>2</item>
+        <item>5</item>
+        <item>10</item>
+        <item>26</item>
+        <item>36</item>
+        <item>43</item>
+        <item>56</item>
+        <item>66</item>
+        <item>77</item>
+        <item>92</item>
+        <item>115</item>
+        <item>138</item>
+        <item>140</item>
+        <item>179</item>
+        <item>194</item>
+        <item>214</item>
+        <item>255</item>
+    </integer-array>
+
+    <!-- Measured panel brightness in nits at each config_screenBrightnessBacklight level. -->
+    <array name="config_screenBrightnessNits">
+        <item>0</item>
+        <item>3</item>
+        <item>10</item>
+        <item>20</item>
+        <item>50</item>
+        <item>70</item>
+        <item>85</item>
+        <item>110</item>
+        <item>130</item>
+        <item>150</item>
+        <item>180</item>
+        <item>225</item>
+        <item>270</item>
+        <item>275</item>
+        <item>350</item>
+        <item>380</item>
+        <item>420</item>
+        <item>500</item>
+    </array>
+
+    <!-- The panel runs at up to 120 Hz. A default refresh rate of 0 lets the
+         peak refresh rate act as the default. -->
+    <integer name="config_defaultRefreshRate">0</integer>
+    <integer name="config_defaultPeakRefreshRate">120</integer>
+
+    <!-- Color modes offered in Settings: natural (0) and saturated (2). -->
+    <integer-array name="config_availableColorModes">
+        <item>0</item>
+        <item>2</item>
+    </integer-array>
+
+    <!-- Punch-hole front camera at the top center of the panel, described as an
+         80 x 117 px box in native (1080 x 2400) pixels. Its height also sets
+         the status bar height. -->
+    <string name="config_mainBuiltInDisplayCutout" translatable="false">M -40,0 L 40,0 L 40,117 L -40,117 Z</string>
+
+    <!-- Vibration patterns used when the vibrator HAL does not implement the
+         matching predefined effect: heavy click, click and tick. -->
+    <integer-array name="config_longPressVibePattern">
+        <item>0</item>
+        <item>60</item>
+    </integer-array>
+    <integer-array name="config_virtualKeyVibePattern">
+        <item>0</item>
+        <item>50</item>
+    </integer-array>
+    <integer-array name="config_clockTickVibePattern">
+        <item>0</item>
+        <item>26</item>
+    </integer-array>
+
+    <!-- The 3.5 mm headset jack reports plug events through the input
+         subsystem (switch events) rather than through uevents. -->
+    <bool name="config_useDevInputEventForAudioJack">true</bool>
+
+    <!-- SIM slot 1 is the embedded eSIM; slot 0 is the removable nano-SIM tray. -->
+    <integer-array name="non_removable_euicc_slots">
+        <item>1</item>
+    </integer-array>
+
+    <!-- MMS user agent and UAProf URL sent to carrier MMSCs. -->
+    <string name="config_mms_user_agent" translatable="false">motogpower5g2024</string>
+    <string name="config_mms_user_agent_profile_url" translatable="false">http://uaprof.motorola.com/phoneconfig/motov1/Profile/motov1.rdf</string>
+</resources>

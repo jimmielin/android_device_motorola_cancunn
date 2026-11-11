@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<!-- Power profile used by battery statistics: average current draw in mA
+     per component and state, CPU cluster layout (6x Cortex-A55 + 2x Cortex-A78)
+     with per-frequency core power, and the 5000 mAh battery capacity. -->
+<device name="Android">
+    <item name="none">0</item>
+    <item name="screen.on">104.25</item>
+    <item name="screen.full">265.26</item>
+    <item name="wifi.on">0.65</item>
+    <item name="wifi.active">72.31</item>
+    <item name="wifi.scan">67.73</item>
+    <item name="camera.avg">562.62</item>
+    <item name="camera.flashlight">126.17</item>
+    <item name="gps.on">9.917</item>
+    <item name="radio.active">267.27</item>
+    <item name="radio.scanning">73.5</item>
+    <array name="radio.on">
+        <value>35</value>
+        <value>30</value>
+        <value>25</value>
+        <value>20</value>
+        <value>15</value>
+        <value>10</value>
+        <value>5</value>
+        <value>2.44</value>
+    </array>
+    <array name="cpu.clusters.cores">
+        <value>6</value>
+        <value>2</value>
+    </array>
+    <array name="cpu.core_speeds.cluster0">
+        <value>500000</value>
+        <value>550000</value>
+        <value>600000</value>
+        <value>650000</value>
+        <value>700000</value>
+        <value>750000</value>
+        <value>800000</value>
+        <value>850000</value>
+        <value>900000</value>
+        <value>950000</value>
+        <value>1000000</value>
+        <value>1050000</value>
+        <value>1100000</value>
+        <value>1150000</value>
+        <value>1200000</value>
+        <value>1250000</value>
+        <value>1300000</value>
+        <value>1350000</value>
+        <value>1400000</value>
+        <value>1450000</value>
+        <value>1500000</value>
+        <value>1550000</value>
+        <value>1600000</value>
+        <value>1650000</value>
+        <value>1700000</value>
+        <value>1750000</value>
+        <value>1800000</value>
+        <value>1850000</value>
+        <value>1900000</value>
+        <value>2000000</value>
+    </array>
+    <array name="cpu.core_speeds.cluster1">
+        <value>550000</value>
+        <value>650000</value>
+        <value>750000</value>
+        <value>850000</value>
+        <value>950000</value>
+        <value>1050000</value>
+        <value>1150000</value>
+        <value>1250000</value>
+        <value>1350000</value>
+        <value>1450000</value>
+        <value>1550000</value>
+        <value>1650000</value>
+        <value>1750000</value>
+        <value>1850000</value>
+        <value>1950000</value>
+        <value>2050000</value>
+        <value>2150000</value>
+        <value>2200000</value>
+    </array>
+    <array name="cpu.core_power.cluster0">
+        <value>50.33</value>
+        <value>51.26</value>
+        <value>51.83</value>
+        <value>53.18</value>
+        <value>53.80</value>
+        <value>54.24</value>
+        <value>55.00</value>
+        <value>55.46</value>
+        <value>56.24</value>
+        <value>57.14</value>
+        <value>58.03</value>
+        <value>58.65</value>
+        <value>59.58</value>
+        <value>60.51</value>
+        <value>61.34</value>
+        <value>62.30</value>
+        <value>63.01</value>
+        <value>63.88</value>
+        <value>64.57</value>
+        <value>65.31</value>
+        <value>66.28</value>
+        <value>66.71</value>
+        <value>67.86</value>
+        <value>68.33</value>
+        <value>69.48</value>
+        <value>69.84</value>
+        <value>70.61</value>
+        <value>71.51</value>
+        <value>71.77</value>
+        <value>72.08</value>
+    </array>
+    <array name="cpu.core_power.cluster1">
+        <value>57.03</value>
+        <value>61.19</value>
+        <value>67.99</value>
+        <value>73.88</value>
+        <value>80.15</value>
+        <value>88.66</value>
+        <value>96.68</value>
+        <value>103.48</value>
+        <value>112.82</value>
+        <value>124.16</value>
+        <value>130.97</value>
+        <value>142.55</value>
+        <value>151.84</value>
+        <value>166.57</value>
+        <value>177.10</value>
+        <value>194.80</value>
+        <value>209.59</value>
+        <value>227.59</value>
+    </array>
+    <item name="cpu.cluster_power.cluster0">3.65</item>
+    <item name="cpu.cluster_power.cluster1">6.70</item>
+    <item name="cpu.suspend">5</item>
+    <item name="cpu.idle">6.91</item>
+    <item name="cpu.active">6.31</item>
+    <item name="battery.capacity">5000</item>
+</device>

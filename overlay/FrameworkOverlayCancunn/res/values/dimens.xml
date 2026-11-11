@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- Status bar height, matching the height of the camera cutout. -->
+    <dimen name="status_bar_height">117px</dimen>
+    <dimen name="status_bar_height_portrait">117px</dimen>
+    <dimen name="status_bar_height_landscape">24dp</dimen>
+
+    <!-- Radius of the rounded display corners. -->
+    <dimen name="rounded_corner_radius">95px</dimen>
+    <dimen name="rounded_corner_radius_top">95px</dimen>
+    <dimen name="rounded_corner_radius_bottom">95px</dimen>
+</resources>
